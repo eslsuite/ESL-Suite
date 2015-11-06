@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <style type="text/css">
+       html{
+    font-family: Century Gothic, Arial!important;
+    overflow-x:hidden;
+  }
+  body{
+    font-family: Century Gothic, Arial!important;
+  }
+  .carousel-inner{
+    height:400px;
+  }
+  #carousel-title{
+    font-size: 30px;
+    padding: 30px 0px 10px 0px;
+  }
+  #carousel-title span{
+    color: #4183d7;
+    font-weight: bold;
+  }
+  .carousel-control{
+    color: black;
+    background-image: none!important;
+    opacity: 1;
+    margin-left: 130px;
+    margin-right: 130px;
+  }
+  .carousel-control:hover{
+    background-image: none!important;
+    color: black;
+    opacity: 0.75;
+  }
+  .carousel-control:focus{
+    color: black;
+    opacity: 0.8;
+  }
+  .carousel-caption{
+    color: black;
+  }
+  .carousel-caption p{
+    display: block;
+    height: 100px;
+    padding-top: 40px;
+    font-size: 18px;
+  }
+  .item-style{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15%;
+    display: inline-block;
+    width: 100%;
+    height: 300px;
+  }
+  .item{
+    height: 100%;
+  }
+  #item1{
+    background-image: url(http://www.eslsuite.com/uploads/2/2/3/2/22328288/1194797_orig.png);
+  }
+  #item2{
+    background-image: url(http://www.eslsuite.com/uploads/2/2/3/2/22328288/835325_orig.png);
+  }
+  #item3{
+    background-image: url(http://www.eslsuite.com/uploads/2/2/3/2/22328288/700992_orig.png);
+  }
+  #item4{
+    background-image: url(http://www.eslsuite.com/uploads/2/2/3/2/22328288/702555_orig.png);
+  }
+  #item5{
+    background-image: url(http://www.eslsuite.com/uploads/2/2/3/2/22328288/3629978_orig.png);
+  }
+  #item6{
+    background-image: url(http://www.eslsuite.com/uploads/2/2/3/2/22328288/6960906_orig.png);
+  }
+  .c-control{
+    top: 40%;
+    position: absolute;
+    font-size: 30px;
+  }
+  #product-title{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),url(https://farm1.staticflickr.com/726/22773316415_a08fa9c940_h.jpg[/);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: block;
+    height: 890px;
+  }
+  #p-title-1{
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    padding-top: 25%;
+  }
+  #p-title-2{
+    font-size: 90px;
+    font-weight: bold;
+    color: white;
+  }
+  #p-title-down{
+    display: block;
+    height: 100px;
+    text-decoration: none;
+    color: white;
+    margin-top: 220px;
+  }
+  #p-title-down:hover{
+    text-decoration: none;
+    color: white;
+  }
+  #p-title-down span{
+    display: block;
+    height: 100px;
+    font-size: 100px;
+  }
+  #intro-title{
+    padding: 40px 0px 40px 0px;
+    font-size: 50px;
+    color: black;
+    font-weight: bold;
+  }
+  #first-left{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),url(https://farm1.staticflickr.com/608/22585060680_9e20afe5e5_h.jpg);
+    height: 370px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+    padding-top: 120px;
+    transition:all .3s ease-in-out;
+    -webkit-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
+    -moz-transition:all .3s ease-in-out;
+    cursor: pointer;
+  }
+  #first-left:hover{
+    transition:all .3s ease-in-out;
+    -webkit-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
+    -moz-transition:all .3s ease-in-out;
+    background-size: 105%;
+  }
+  #first-right{
+    background-color: #89c4f4;
+    height: 370px;
+  }
+  #tesol{
+    background-image: url(https://farm6.staticflickr.com/5687/22760013882_98951fe371_o.png);
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: center 30%;
+    height: 100%;
+    padding-top: 240px;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+  }
+  #job{
+    background-image: url(https://farm1.staticflickr.com/655/22773538005_3e06fee553_o.png);
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: center 30%;
+    height: 100%;
+    padding-top: 240px;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+  }
+  #second-left{
+    background-color: #3498db;
+    height: 370px;
+  }
+  #second-right{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),url(https://farm1.staticflickr.com/744/22759479432_f76d4baa70_h.jpg);
+    height: 370px;
+    background-size: 100%;
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+    padding-top: 120px;
+    transition:all .3s ease-in-out;
+    -webkit-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
+    -moz-transition:all .3s ease-in-out;
+    cursor: pointer;
+  }
+  #second-right:hover{
+    transition:all .3s ease-in-out;
+    -webkit-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
+    -moz-transition:all .3s ease-in-out;
+    background-size: 105%;
+  }
+  .learnmore{
+    margin-top: 10px;
+    display: inline-block;
+    padding:7px 35px;
+    background-color: #f9690e;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition:all .3s ease-in-out;
+    -webkit-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
+    -moz-transition:all .3s ease-in-out;
+  }
+  .learnmore:hover{
+    text-decoration: none;
+    color: white;
+    background-color: #D35400;
+    transition:all .3s ease-in-out;
+    -webkit-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
+    -moz-transition:all .3s ease-in-out;
+  }
+  .transparent{
+    opacity: 0;
+  }
+  .titleline{
+    display: inline-block;
+    background-color: #22313F;
+    margin: 15px 30px 15px 30px;
+    width: 200px;
+    height: 2px;
+  }
+  #feat-job-background{
+    background-image: url(https://farm1.staticflickr.com/672/22172291214_707201eeec_o.jpg);
+    background-repeat: no-repeat;
+    background-position: center 50%;
+    background-size: 100%;
+    display: block;
+    width: 100%;
+    height: 520px;
+  }
+  #job-descrip{
+    display: block;
+    height: 100%;
+    width: 47%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
+    float: right;
+    margin-right: 16%;
+    color: white;
+    font-size: 23px;
+    padding-top: 30px;
+    opacity: 0;
+  }
+  .bold{
+    font-weight: bold;
+  }
+  #job-descrip li{
+    text-align: left;
+    margin-left: 60px;
+    font-size: 20px;
+  }
+  #job-descrip ul{
+    margin-top: 30px;
+  }
+  #job-descrip a{
+    float: left;
+    margin-left: 50px;
+    font-weight: bold;
+  }
+  #content-wrapper{
+    width: 100%!important;
+    margin: 0px!important;
+    overflow-y:visible!important;
+  }
+  #content{
+    padding: 0px 0px 0px 0px;
+  }
+  #bodydiv{
+      overflow-x:hidden!important;
+  }
+  #header{
+    display: block;
+    width: 100%;
+    height: 900px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(https://farm1.staticflickr.com/619/22784742062_aaefd0b133_o.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    padding-top: 300px;
+  }
+  #header span{
+    font-size: 80px;
+    font-weight: bold;
+    margin-top: 60px;
+  }
+  #header p{
+    font-size: 30px;
+    margin: 20px 200px 70px 200px;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="cento-header">
+      <div class="container">
+        <div class="logo">{logo}</div>
+        <label class="hamburger"><span></span></label>
+      </div>
+      <div class="nav-wrap">
+        <div class="container">
+          <div class="nav desktop-nav">{menu}</div>
+        </div><!-- end .container -->
+      </div><!-- end .nav-wrap -->
+    </div><!-- end .header -->  
+</div>
+<div id="bodydiv">
+<div id="header" class="text-center">
+  <span>Live.Teach.Explore.</span>
+  <p>Study TESOL with ESL Suite and find your dream teaching job in one of China's vibrant cities. What are you waiting for? Take the first step towards teaching English in the world's most exciting country!</p>
+  <a class="learnmore text-center bold" href="#">
+    LEARN MORE
+  </a>
+</div>
+<div id="carousel-title" class="text-center">
+  We've Helped <span>Hundreds</span> of Teachers Find Meaningful Work in China.
+</div>
+<div id="carousel" class="carousel slide" data-ride="carousel">
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+
+    <div class="item active">
+    <div id="item1" class="item-style">
+        <div class="carousel-caption">
+       <p>
+        “The service I receive from ESL Suite was very professional, and 
+      really just a greatexperience for me.I absolutely LOVE the school 
+      that I am working at now.”
+       </p>
+      </div>
+    </div>
+    </div>
+
+  <div class="item">
+    <div id="item2" class="item-style">
+        <div class="carousel-caption">
+       <p>
+       “I love my new job, and the city I live in.I'd highly recommend ESL Suite to experienced or new teachers for any job placement needs.”
+       </p>
+      </div>
+    </div>
+    </div>
+
+    <div class="item">
+    <div id="item3" class="item-style">
+        <div class="carousel-caption">
+       <p>
+       “ I couldn't have imagined finding such a great job in China, and I credit ESL Suite with helping my find my position that fits my interests perfectly.”
+       </p>
+      </div>
+    </div>
+    </div>
+
+     <div class="item">
+    <div id="item4" class="item-style">
+        <div class="carousel-caption">
+       <p>
+       “I was very pleased with their service, efficiency and honesty.I am now happily employed in Zhengzhou, China and living my dream, which would not be possible without ESL Suite!:)”
+       </p>
+      </div>
+    </div>
+    </div>
+
+    <div class="item">
+    <div id="item5" class="item-style">
+        <div class="carousel-caption">
+       <p>
+       “Thanks to ESL Suite, I am currently working at a Montessori preschool in exciting Beijing. I highly recommend ESL Suite to anyone seeking teaching jobs in China!”
+       </p>
+      </div>
+    </div>
+    </div>
+
+    <div class="item">
+    <div id="item6" class="item-style">
+        <div class="carousel-caption">
+       <p>
+      “ESL Suite provides constant communication, advice and reassurance and really looks out for the candidate in a way no other agency in this industry has in the West, never mind China.”
+       </p>
+      </div>
+    </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-menu-left c-control" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-menu-right c-control" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div id="product-title" class="text-center">
+  <p id="p-title-1">Ready to Teach English in China?</p>
+  <p id="p-title-2">Your Search Starts HERE.</p>
+  <a id="p-title-down" href="#product-intro">
+    <span class="glyphicon glyphicon-menu-down"></span>
+  </a>
+</div>
+<div id="product-intro">
+  <div id="intro-title" class="text-center">
+  <span class="titleline" ></span>
+  What We Do
+  <span class="titleline" ></span>
+  </div>
+  <div id="product-details">
+    <div id="first-product">
+      <div class="row">
+      <a href="#">
+        <div id="first-left" class="col-md-6 text-center">
+        <span class="transparent">Tianjin, China</span>
+        </div>
+        </a>
+        <div id="first-right" class="col-md-6 text-center">
+        <div id="tesol">
+          Study TESOL in Tianjin, China
+          <p>
+            <a class="learnmore text-center" href="#">
+              Learn more
+            </a>
+          </p>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="second-product">
+      <div class="row">
+        <div id="second-left" class="col-md-6 text-center">
+        <div id="job">
+          Find A Teaching Job in China
+          <p>
+            <a class="learnmore text-center" href="#">
+              Learn more
+            </a>
+          </p>
+        </div>
+        </div>
+        <a href="#">
+        <div id="second-right" class="col-md-6 text-center">
+        <span class="transparent">Teach in China</span>
+        </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="featuredjob">
+  <div id="intro-title" class="text-center">
+  <span class="titleline" ></span>
+  Featured Job
+  <span class="titleline" ></span>
+  </div>
+  <div id="feat-job-background">
+    <div id="job-descrip" class="text-center">
+      <span class="bold" >Teach English at a Public School or University in Tianjin</span>
+      <ul>
+        <li>Salary CNY 8,000 - 15,000/per month</li>
+        <li>Apartment allowance CNY 2,000/month</li>
+        <li>Flight allowance CNY 5,000</li>
+        <li>Contract completion bonus CNY 3,000</li>
+        <li>Z-visa and residence permit</li>
+        <li>Health insurance</li>
+        <li>Paid Chinese holiday (11 days)</li>
+        <li>7-days unpaid annual leave</li>
+        <li>Summer and winter break</li>
+        <li>Comprehensive curriculum, lesson plans, and teaching materials </li>
+        <li>AND much more!</li>
+      </ul>
+      <a class="learnmore text-center" href="#">
+        Apply Today!
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+    
+<div style='display:none'>{content}</div>
+<div style='padding: 20px; width:100%; text-align:center;'>{footer}</div>
+</body>
+<footer>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $("#p-title-down").click(function(event){
+      event.preventDefault();
+      var hash = this.hash;
+      $("html, body").animate({
+        scrollTop:$(hash).offset().top
+      }, 900, function(){
+        window.location.hash = hash;
+      });
+    });
+
+    $(window).scroll(function(){
+      var elementBottom = $("#first-left").offset().top + $("#first-left").outerHeight();
+      var windowBottom = $(window).scrollTop() + $(window).height();
+
+      if (windowBottom >= elementBottom)
+      {
+        $("#first-left span").animate({
+          "opacity": "1"
+        }, 900);
+        $("#tesol").animate({
+          "opacity": "1"
+        }, 900);
+      }
+
+      elementBottom = $("#second-left").offset().top + $("#second-left").outerHeight();
+
+      if (windowBottom >= elementBottom)
+      {
+        $("#second-right span").animate({
+          "opacity": "1"
+        }, 900);
+        $("#job").animate({
+          "opacity": "1"
+        }, 900);
+      }
+
+      elementBottom = $("#featuredjob").offset().top + $("#featuredjob").outerHeight() - 200;
+      if (windowBottom >= elementBottom)
+      {
+        $("#job-descrip").animate({
+          "opacity":"1"
+        }, 900);
+      }
+    });
+  });
+  </script>
+</footer>
+</html>
